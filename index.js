@@ -22,9 +22,11 @@ const loginRoutes = require('./routes/loginRoutes');
 const signoutRoutes = require('./routes/signoutRoutes');
 const userRoutes = require('./routes/userRoutes')
 const otherRoutes = require('./routes/otherRoutes');
-const dbUrl = process.env.db_Url || 'mongodb://localhost:27017/mydb'
+const port = process.env.Port || 3000;
+const dbUrl = process.env.db_Url || 'mongodb://localhost:27017/mydb';
 const sessionSecret = process.env.sessionSecret || '*thisIsTheProductionSessionSecret*';
 const sessionName = process.env.sessionName || '%Tmp%';
+
 const store = MongoStore.create({
     mongoUrl: dbUrl,
     secret: sessionSecret,
@@ -120,4 +122,4 @@ app.use((err, req, res, next) => {
 
 
 /// START SERVER 
-app.listen(3000, (req, res) => console.log('SERVER CREATED! /PORT : 3000'))
+app.listen(port, (req, res) => console.log(`SERVER CREATED! /PORT : ${port}`))
