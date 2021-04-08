@@ -1,0 +1,70 @@
+<title>Login</title>
+<%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/head.ejs') %>
+
+    <link rel="stylesheet" href="/assets/Login.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/flashMsg.ejs') %>
+                <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/navbar.ejs') %>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/home" target=""> <i class="fas fa-house-user"></i> Home</a>
+                        </li>
+
+
+
+        </div>
+        <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+        </nav>
+        <div class="jumbotron">
+            <h1>Welcome back! <i class="far fa-smile-wink"></i></h1>
+        </div>
+        <div class="row">
+            <div id="div1" class="col-xs-8">
+                <h4>Let us know who are you ?! <i class="far fa-grin-wink"></i></h4>
+                <form action="/Login" method="POST" class="form-groupe">
+                    <input class="form-control" type="username" name="username" placeholder="username" required autofocus>
+                    <input class="form-control" type="email" name="email" placeholder="email" required>
+                    <input class="form-control" type="password" name="password" placeholder="password" required>
+                    <button class="btn btn-sm btn-info"><i class="fas fa-user"></i>
+          Login 
+        </button>
+
+                </form>
+
+                <form id="Login-redirect" action="" method="GET">
+                    <div class="col-sm-6 col-xs-10"><a href="Signup" target="-blank12"><i
+              class="fas fa-user-plus"></i> Add a new account!</a></div>
+                    <div class="col-sm-6 col-xs-10"><a href="/comingSoon" target="-blank12"><i class="fas fa-grin-beam-sweat"></i> A forgotten
+            password!</a>
+
+                </form>
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/bottum.ejs') %>

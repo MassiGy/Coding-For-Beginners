@@ -1,0 +1,85 @@
+<title>Write us feedbacks!</title>
+<%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/head.ejs') %>
+    <link rel="stylesheet" href="/assets/createFeedback.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/navbar.ejs') %>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/home"> <i class="fas fa-house-user"></i> Home</a>
+                    </li>
+                    <% if(!activeUser){  %>
+                        <li><a href="/Login"><i class="fas fa-user"></i> Login</a></li>
+                        <% if(!isSignedIn){ %>
+                            <li><a href="/Signup" target="_blank"><i class="fas fa-user-plus"></i> Signup</a></li>
+                            <% } %>
+                                <% }else{ %>
+                                    <li><a href="/Logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                                    <% } %>
+                                        <% if(isSignedIn) { %>
+                                            <li><a href="/SignOut" target="-blank"><i class="fas fa-user-minus"></i> SingOut</a></li>
+                                            <% } %>
+        </div>
+        <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+        </nav>
+        <div class="jumbotron">
+
+            <h1>Write feedbacks! </h1>
+            <h2>fill the gaps down below</h2>
+        </div>
+        <form action="/feedbacks" method="post" class="from-groupe">
+            <div class="row">
+                <div class="col-sm-4 col-xs-6">
+                    <h4><i class="fas fa-address-card"></i> Who are you ?!</h4><br>
+
+                    <input id="user-email" class="form-control" type="email" name="email" placeholder="email" required autofocus>
+                    <input id="user-username" class="form-control" type="username" name="username" placeholder="username" required>
+                    <input id="user-job" class="form-control" type="text" name="userJob" placeholder=" Your Work in Life !" required>
+                </div>
+
+                <div class="col-sm-4 col-xs-6">
+                    <h4><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Make your choises!</h4>
+                    <p>You were satisfied ?! <i class="far fa-thumbs-up"></i> <i class="far fa-meh-rolling-eyes"> <i
+                     class="far fa-frown"></i></i>
+                    </p>
+                    <select id="userSatisfied" class="form-control selects1" name="userSatisfied">
+                     <% for(let option of userSatisfiedOptions){ %>
+                        <option value="<%= option  %>" ><%= option  %> </option>
+                        <% } %>  
+                   </select>
+                    <p>If you aren't satisfied,tell us what's the problem?! <i class="far fa-smile-beam"></i></p>
+                    <select id="websiteProblem" class="form-control selects1" name="websiteProblem">
+                        <% for(let option of websiteProblemOptions){ %>
+                            <option value="<%= option  %>" ><%= option  %> </option>
+                            <% } %>
+                    </select>
+
+                </div>
+
+
+                <div class="col-sm-4 col-xs-6">
+                    <h4><i class="fas fa-edit"></i> Write your feedback! </h4>
+                    <textarea name="feedbackText" id="feedbackText" cols="30" rows="10" required></textarea>
+                    <button id="sendBtn" class="btn btn-xs btn-info "><span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+                     Send</button>
+
+                </div>
+            </div>
+
+        </form>
+        <form class="form-groupe" action="/feedbacks" method="get">
+            <div id="viewfeedbacksBtn">
+                <button class="btn btn-sm btn-success">
+                View Feedbacks
+            </button>
+            </div>
+        </form>
+
+        <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/aboutUs.ejs') %>
+
+            <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/bottum.ejs') %>

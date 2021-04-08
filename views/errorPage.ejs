@@ -1,0 +1,51 @@
+<title>Error Page</title>
+<%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/head.ejs') %>
+    <link rel="stylesheet" href="/assets/errorPage&Signout.css">
+
+    </head>
+
+    <body>
+        <div class="container">
+            <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/navbar.ejs') %>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/home" target=""> <i class="fas fa-house-user"></i> Home</a>
+                    </li>
+
+
+
+        </div>
+        <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+        </nav>
+
+        <div class="alert alert-danger" role="alert">
+            <h3 class="alert-heading text-center">
+                The error name is :
+                <%= err.name %>
+                    <br> The error status is :
+                    <%= err.status %>
+            </h3>
+            <h5 class="text-center">
+                The error message is :
+                <%= err.message %>
+            </h5>
+            <hr>
+            <p>
+                <ul>
+                    <strong>=>Need a hint?:</strong>
+                    <li>Make sure that your request is valid!</li>
+                    <li>Make sure that you have entred all the required data</li>
+                    <li>Make sure that your credientials are corrects</li>
+                    <li>Make sure that your posts or edits are allright</li>
+                    <li>Make sure that your data does not contain any html, ejs, or even scripts tags</li>
+                    <li>Make sure that your email ends with { <b>.com , .fr , .de</b> }</li>
+                </ul>
+            </p>
+        </div>
+
+        <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/aboutUs.ejs') %>
+
+            <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/bottum.ejs') %>

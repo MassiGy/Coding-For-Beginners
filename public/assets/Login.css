@@ -1,0 +1,27 @@
+body {
+    padding-top: 70px;
+}
+
+.jumbotron {
+    text-align: center !important;
+    background-image: url(https://images.unsplash.com/photo-1579600161224-cac5a2971069?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+#div1 {
+    width: 40% !important;
+    text-align: center;
+    margin-left: 30%;
+    margin-top: 10%;
+}
+
+#Login-redirect {
+    margin-left: 30px;
+    text-align: center !important;
+}

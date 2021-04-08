@@ -1,0 +1,68 @@
+<title>Our feedbacks!</title>
+<%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/head.ejs') %>
+    <link rel="stylesheet" href="/assets/feedbacks.css">
+    </head>
+
+    <body class="container">
+        <div class="container">
+            <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/flashMsg.ejs') %>
+                <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/navbar.ejs') %>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/home"> <i class="fas fa-house-user"></i> Home</a>
+                        </li>
+
+
+
+        </div>
+        <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+        </nav>
+        <h2>Our Feedbacks! ;</h2>
+        <section id="feedbacksContainer">
+
+            <% for (let feedback of feedbacks){ %>
+
+                <h4>Posted by :
+                    <a href="/user/<%= feedback.author.username %>">
+                        <%= feedback.author.username %>
+                    </a>
+                </h4>
+                <p>User Satisfactions rate :
+                    <a href="/feedbacks?userSatisfied=<%= feedback.userSatisfied %>">
+                        <%= feedback.userSatisfied %>
+                    </a> (link to see feedbacks with userSatisfactions:
+                    <%= feedback.userSatisfied %> )
+                </p>
+                <p>The encountred problem :
+                    <%= feedback.websiteProblem  %>
+                </p>
+                <p>
+                    Feedback Text :
+                    <%= feedback.feedbackText %>
+                </p>
+                <form class="from-groupe" action="/feedbacks/<%= feedback.id %>" method="GET">
+                    <button class="btn btn-xs btn-info ">
+                            Details
+                        </button>
+                </form>
+                <hr>
+                <%} %>
+
+
+
+                    <form class="from-groupe" action="/feedbacks/new" method="GET">
+                        <button class="btn btn-xs btn-success  ">
+                            Write Feedback!
+                        </button>
+                    </form>
+        </section>
+
+
+
+
+
+        <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/aboutUs.ejs') %>
+            <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/bottum.ejs') %>

@@ -1,0 +1,85 @@
+<title>Coding for Beginners</title>
+<%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/head.ejs') %>
+    <link rel="stylesheet" href="/assets/home.css">
+    </head>
+    <!-- /////////////////////////////// -->
+    <!-- //////////////////////////// -->
+
+    <body>
+        <div class="container">
+            <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/flashMsg.ejs') %>
+
+                <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/navbar.ejs') %>
+                    <ul class="nav navbar-nav navbar-right">
+                        <% if(!activeUser){  %>
+                            <li><a href="/Login"><i class="fas fa-user"></i> Login</a></li>
+                            <% if(!isSignedIn){ %>
+                                <li><a href="/Signup" target="_blank"><i class="fas fa-user-plus"></i> Signup</a></li>
+                                <% } %>
+                                    <% }else{ %>
+                                        <li><a href="/Logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                                        <% } %>
+                                            <% if(isSignedIn) { %>
+                                                <li><a href="/SignOut" target="-blank"><i class="fas fa-user-minus"></i> SingOut</a></li>
+                                                <% } %>
+
+        </div>
+        <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+        </nav>
+        <div class="jumbotron">
+
+            <h1><span class="glyphicon glyphicon-send" aria-hidden="true"></span> Hello ,world ! </h1>
+            <h2>This is my website!</h2>
+            <p>Chat with me in facebook!</p>
+            <form>
+                <button type="button" class="btn btn-info"><a id="special0" href="https://www.facebook.com/massi.gy.9"
+                    target="-blank0">Go to Facebook</a></button>
+            </form>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-xs-12">
+                <h3>First Try in Coding!</h3>
+                <p>This is my first try in coding , I've learned some tips in courses in <a href="https://www.udemy.com/?utm_source=adwords-brand&utm_medium=udemyads&utm_campaign=Brand-Udemy_la.EN_cc.ROW&utm_term=_._ag_80315195513_._ad_386251995970_._de_c_._dm__._pl__._ti_aud-568228300785:kwd-310556426868_._li_9069695_._pd__._&utm_term=_._pd__._kw_udemy_._&matchtype=e&gclid=Cj0KCQjwhtT1BRCiARIsAGlY51IIKuZqYVoyBC4TWjufIIoWLrikQfdJ4Gy01JFfs_Vrb4EWPGCM81AaAsnYEALw_wcB"
+                        target="-blank1">udemy</a>, it was really nice! the teachers there are good and the content showcase is simple which make it so easy for a beginner as me. So hope that this website will look great,Let's get on it! </p>
+                <h3>Why Should You Learn to Code?!</h3>
+                <p>As Steve Jobs once said, “I think everybody in this country should learn how to program a computer, because it teaches you how to think. I view computer science as a liberal art.” In other words, learning to code won’t just give you technical
+                    knowledge it will also give you a new way to approach your work. “Coding forced me to start out with a plan, identify potential trouble areas, and troubleshoot, troubleshoot, troubleshoot,” says Heather Stegner, Senior Director of
+                    Communications at American Wood Council. “It's a logical way of thinking that I've been able to apply just as successfully when developing a media strategy as trying to figure out why Internet Explorer isn't cooperating.” Learning
+                    to program also makes your attention to detail skyrocket. After all, when a single misplaced hyphen or missing period can mess up your entire code, you become quite skilled at checking your work (not to mention, doing things right
+                    the first time!).
+                </p>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <h3>What Kind of Jobs You Can Get with Coding?!</h3>
+                <p>The computer programming industry creates and maintains computer programs and systems for clients. People use these programs in almost every industry for both professional and personal purposes. There are many specific job titles you can
+                    have as a computer programming professional. Positions are available at all levels of the computer programming industry and companies are hiring programmers around the world.
+                    <ol>So you can be :
+                        <li>Computer programmer</li>
+                        <li>Programmer analyst</li>
+                        <li>Computer systems engineer</li>
+                        <li>Software engineer</li>
+                        <li>Web developer</li>
+                        <li>Mobile app developer</li>
+                    </ol>
+                </p>
+                <p>You can also learn more about those jobs and the salairy of each one of them in <a href="https://www.indeed.com/" target="-blank2">indeed.com </a></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-xs-12">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1587613864411-969e5288c708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80">
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1587613981449-f3962dbba9b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/aboutUs.ejs') %>
+        </div>
+        <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/bottum.ejs') %>

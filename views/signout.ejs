@@ -1,0 +1,49 @@
+<title>Singout :( </title>
+<link rel="stylesheet" href="/assets/errorPage&Signout.css">
+<%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/head.ejs') %>
+
+    </head>
+
+    <body class="container">
+        <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/flashMsg.ejs') %>
+            <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/navbar.ejs') %>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/home" target=""> <i class="fas fa-house-user"></i> Home</a>
+                    </li>
+
+
+
+                    <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container-fluid -->
+                    </nav>
+
+                    <div class="jumbotron">
+                        <h2>Hope that we will see you again! <i class="far fa-smile-wink"></i></h2>
+                        <p>Enjoy your time!</p>
+                    </div>
+
+
+                    <div class="signoutdiv">
+                        <form class="form-groupe" action="/SignOut" method="post">
+
+                            <label for="usernameTodelete">Please insert your username</label>
+
+                            <input class="form-control" type="username" name="username" placeholder="your username" id="usernameTodelete" required autofocus>
+                            <label for="emailTodelete">Please insert your email</label>
+
+                            <input class="form-control" type="email" name="email" placeholder="your email" id="emailTodelete" required>
+                            <br>
+                            <button id="submitBtn" class="btn btn-sm btn-info"> submit</button>
+
+                        </form>
+                    </div>
+                    </div>
+
+
+
+
+
+                    <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/bottum.ejs') %>

@@ -1,0 +1,32 @@
+<% if(danger && danger.length) {%>
+    <div class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p class="alert-heading text-center">
+
+            <%= danger %>
+        </p>
+    </div>
+    <% } %>
+
+        <% if(success && success.length){ %>
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <p class="alert-heading text-center">
+
+                    <p class="alert-heading text-center">
+                        <%= success %>
+                    </p>
+            </div>
+            <% } %>
+
+
+                <% if(passport&& passport.length){ %>
+                    <div class="alert alert-danger alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <p class="alert-heading text-center">
+
+                            <p class="alert-heading text-center">
+                                <%= passport %>
+                            </p>
+                    </div>
+                    <% } %>

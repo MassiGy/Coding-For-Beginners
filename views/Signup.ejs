@@ -1,0 +1,56 @@
+<title>Sing Up</title>
+<%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/head.ejs') %>
+    <link rel="stylesheet" href="/assets/Signup.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/flashMsg.ejs') %>
+
+                <%- include("C:/Users/ghern/myCode/mywebsites/project1-v2/partials/navbar.ejs") %>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/home"> <i class="fas fa-house-user"></i> Home</a>
+                        </li>
+
+
+
+        </div>
+        <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+        </nav>
+
+        <div class="jumbotron">
+            <h1>Welcome! <i class="far fa-smile-wink"></i></h1>
+            <p>Enjoy your time!</p>
+        </div>
+        <div class="row">
+            <form action="/Signup" class="form-groupe" method="POST">
+                <div class=" col-xs-6">
+                    <h4><i class="far fa-address-card"></i> Welcome,there it goes!</h4>
+                    <input class="form-control" type="Name" name="Name" placeholder="Name" required autofocus>
+                    <input class="form-control" type="Family name" name="familyName" placeholder="Family name" required>
+                    <input class="form-control" type="username" name="username" placeholder="username" required>
+
+
+                </div>
+                <div class=" col-xs-6">
+                    <h4><i class="far fa-laugh-beam"></i> Almost done!</h4>
+                    <input class="form-control" type="email" name="email" placeholder="email" required>
+                    <input class="form-control" type="password" name="password" placeholder="password" required>
+                    <input class="form-control" type="url" name="imgSrc" placeholder="Your Avatar Picture Source (url adress of the image)" required>
+
+                    <button class="btn btn-sm btn-info">Send <span class="glyphicon glyphicon-send"
+            aria-hidden="true"></span></button>
+                    </section>
+
+                </div>
+
+
+            </form>
+        </div>
+        </div>
+
+
+        <%- include("C:/Users/ghern/myCode/mywebsites/project1-v2/partials/bottum.ejs") %>

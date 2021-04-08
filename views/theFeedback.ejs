@@ -1,0 +1,84 @@
+<title>Our feedbacks!</title>
+<%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/head.ejs') %>
+    <link rel="stylesheet" href="/assets/feedbacks.css">
+    </head>
+
+    <body class="container">
+        <div class="container">
+            <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/flashMsg.ejs') %>
+                <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/navbar.ejs') %>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/home"> <i class="fas fa-house-user"></i> Home</a>
+                        </li>
+
+
+
+        </div>
+        <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+        </nav>
+        <h2>Our Feedbacks! ;</h2>
+        <section id="feedbacksContainer">
+
+
+            <hr>
+            <h4>Posted by :
+                <a href="/user/<%= theFeedback.author.username %>">
+                    <%= theFeedback.author.username %>
+                </a>
+
+            </h4>
+            <h5>With an email of :
+                <%= theFeedback.author.email %>
+            </h5>
+            <h6>With an ID of :
+                <%= theFeedback.author._id %>
+            </h6>
+            <p>User Satisfactions rate :
+                <%= theFeedback.userSatisfied %>
+            </p>
+            <p>The encountred problem :
+                <%= theFeedback.websiteProblem  %>
+            </p>
+            <p>
+                Feedback Text :
+                <%= theFeedback.feedbackText %>
+            </p>
+            <% if(activeUser && theFeedback.author.equals(activeUser._id)){ %>
+                <div id="feedbackControl" class="row">
+                    <div id="deleteBtn" class=" col-xs-6">
+
+                        <form class="from-groupe" action="/feedbacks/<%= theFeedback._id %>?_methode=DELETE" method="POST">
+                            <button class="btn btn-xs btn-danger ">
+                            delete
+                        </button>
+                        </form>
+                    </div>
+                    <div id="editBtn" class=" col-xs-6">
+                        <form class="from-groupe" action="/feedbacks/<%= theFeedback._id %>/edit" method="GET">
+                            <button class="btn btn-xs btn-warning">
+                                      Edit .
+                </button>
+                        </form>
+                    </div>
+                </div>
+                <% } %>
+                    <hr>
+                    <form class="from-groupe" action="/feedbacks" method="GET">
+                        <button class="btn btn-xs btn-success ">
+                        Views Feedbacks
+                        </button>
+                    </form>
+
+
+        </section>
+
+
+
+
+
+        <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/aboutUs.ejs') %>
+            <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/bottum.ejs') %>

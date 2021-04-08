@@ -1,0 +1,58 @@
+body {
+    padding-top: 70px;
+}
+
+h3:hover {
+    color: blueviolet;
+}
+
+.jumbotron {
+    background-image: url('https://images.unsplash.com/photo-1492229827549-864b833d699c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 20px;
+    text-align: center;
+}
+
+.alert {
+    margin-top: 80px !important;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.page-buttom {
+    border-top: solid 2px rgba(1, 229, 250, 0.822) !important;
+    background-color: rgba(193, 193, 219, 0.548) !important;
+    margin-bottom: 0% !important;
+    margin-top: 14% !important;
+    border-radius: 5% !important;
+}
+
+.signoutdiv {
+    text-align: center;
+}
+
+#usernameTodelete {
+    width: 40%;
+    margin: auto;
+}
+
+#emailTodelete {
+    width: 40%;
+    margin: auto;
+}
+
+#submitBtn {
+    width: 20%;
+    margin: 20px;
+}
+
+label {
+    width: auto;
+    margin: 40px;
+}

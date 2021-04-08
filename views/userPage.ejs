@@ -1,0 +1,101 @@
+<title>
+    <%= user.username %> userPage </title>
+<%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/head.ejs') %>
+    <link rel="stylesheet" href="/assets/feedbacks.css">
+    </head>
+
+    <body class="container">
+        <div class="container">
+            <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/flashMsg.ejs') %>
+                <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/navbar.ejs') %>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/home"> <i class="fas fa-house-user"></i> Home</a>
+                        </li>
+
+
+
+        </div>
+        <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+        </nav>
+
+
+
+        <div class="row" id="mainRow">
+            <div class="col-xs-12 col-md-6">
+                <h2>
+                    <%= user.username %> Profile</h2>
+                <br><br>
+                <h5>With an email of :
+                    <%= user.email %>
+                </h5>
+                <h5>With an Id of :
+                    <%= user._id %>
+                </h5>
+                <br><br><br>
+                <footer>
+                    <h5> Avatar image </h5>
+                    <div class="text-center">
+                        <img id="avatarImg" src="<%= user.imgSrc %>" class="rounded">
+                    </div>
+                </footer>
+                <br><br><br>
+                <% if(activeUser._id.equals(user._id)){ %>
+                    <form action="/user/<%= user.username %>/edit" method="get">
+                        <button class="btn btn-sm btn-info"> Edit Profile</button>
+                    </form>
+                    <%} %>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <section id="feedbacksContainer">
+                    <h4>
+                        <%= user.username %> Feedbacks </h4>
+                    <% let i = 0 %>
+                        <% for (let feedback of user.postedFeedbacks){ %>
+                            <% i++ %>
+                                <h5>Feedback number °
+                                    <%= i %>
+                                </h5>
+                                <h6>With an ID of :
+                                    <%= feedback.id %>
+                                </h6>
+                                <p>User Satisfactions rate :
+                                    <a href="/feedbacks?userSatisfied=<%= feedback.userSatisfied %>">
+                                        <%= feedback.userSatisfied %>
+                                    </a> (link to see feedbacks with userSatisfactions:
+                                    <%= feedback.userSatisfied %> )
+                                </p>
+                                <p>The encountred problem :
+                                    <%= feedback.websiteProblem  %>
+                                </p>
+                                <p>
+                                    Feedback Text :
+                                    <%= feedback.feedbackText %>
+                                </p>
+                                <form class="from-groupe" action="/feedbacks/<%= feedback.id %>" method="GET">
+                                    <button class="btn btn-xs btn-info ">
+                                Details
+                            </button>
+                                </form>
+                                <hr>
+                                <%} %>
+
+
+
+                                    <form class="from-groupe" action="/feedbacks" method="GET">
+                                        <button class="btn btn-xs btn-success  ">
+                                All Feedbacks!
+                            </button>
+                                    </form>
+                </section>
+
+            </div>
+        </div>
+
+
+
+        <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/aboutUs.ejs') %>
+            <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/bottum.ejs') %>

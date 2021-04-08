@@ -1,0 +1,39 @@
+body {
+    padding-top: 70px;
+}
+
+.jumbotron {
+    text-align: center !important;
+    background-image: url(https://images.unsplash.com/photo-1582137490248-c53207ec5602?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+button a {
+    color: blanchedalmond;
+}
+
+.page-buttom {
+    border-top: solid 2px rgba(1, 229, 250, 0.822);
+    background-color: rgba(193, 193, 219, 0.548);
+    margin-top: 1% !important;
+    border-radius: 5% !important;
+}
+
+.selects1 {
+    margin-bottom: 20px;
+}
+
+textarea {
+    max-width: 80%;
+    max-height: 300px;
+}
+
+#viewfeedbacksBtn {
+    text-align: center;
+}
