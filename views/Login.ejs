@@ -1,13 +1,16 @@
 <title>Login</title>
-<%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/head.ejs') %>
+<%- include('./partials/head.ejs') %>
 
-    <link rel="stylesheet" href="/assets/Login.css">
+
+    <link rel="stylesheet" href="../public/assets/Login.css">
     </head>
 
     <body>
         <div class="container">
-            <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/flashMsg.ejs') %>
-                <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/navbar.ejs') %>
+            <%- include('./partials/flashMsg.ejs') %>
+
+                <%- include('./partials/navbar.ejs') %>
+
 
                     <ul class="nav navbar-nav navbar-right">
                         <li>
@@ -38,7 +41,7 @@
                 </form>
 
                 <form id="Login-redirect" action="" method="GET">
-                    <div class="col-sm-6 col-xs-10"><a href="Signup" target="-blank12"><i
+                    <div class="col-sm-6 col-xs-10"><a href="/Signup" target="-blank12"><i
               class="fas fa-user-plus"></i> Add a new account!</a></div>
                     <div class="col-sm-6 col-xs-10"><a href="/comingSoon" target="-blank12"><i class="fas fa-grin-beam-sweat"></i> A forgotten
             password!</a>
@@ -67,4 +70,4 @@
 
 
 
-            <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/bottum.ejs') %>
+            <%- include('./partials/bottum.ejs') %>

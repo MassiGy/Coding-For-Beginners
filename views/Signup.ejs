@@ -1,13 +1,16 @@
 <title>Sing Up</title>
-<%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/head.ejs') %>
-    <link rel="stylesheet" href="/assets/Signup.css">
+<%- include('./partials/head.ejs') %>
+
+    <link rel="stylesheet" href="../public/assets/Signup.css">
     </head>
 
     <body>
         <div class="container">
-            <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/flashMsg.ejs') %>
+            <%- include('./partials/flashMsg.ejs') %>
 
-                <%- include("C:/Users/ghern/myCode/mywebsites/project1-v2/partials/navbar.ejs") %>
+
+                <%- include('./partials/navbar.ejs') %>
+
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             <a href="/home"> <i class="fas fa-house-user"></i> Home</a>
@@ -53,4 +56,4 @@
         </div>
 
 
-        <%- include("C:/Users/ghern/myCode/mywebsites/project1-v2/partials/bottum.ejs") %>
+        <%- include('./partials/bottum.ejs') %>

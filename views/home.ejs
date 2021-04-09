@@ -1,15 +1,18 @@
 <title>Coding for Beginners</title>
-<%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/head.ejs') %>
-    <link rel="stylesheet" href="/assets/home.css">
+<%- include('./partials/head.ejs') %>
+
+    <link rel="stylesheet" href="../public/assets/home.css">
     </head>
     <!-- /////////////////////////////// -->
     <!-- //////////////////////////// -->
 
     <body>
         <div class="container">
-            <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/flashMsg.ejs') %>
+            <%- include('./partials/flashMsg.ejs') %>
 
-                <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/navbar.ejs') %>
+
+                <%- include('./partials/navbar.ejs') %>
+
                     <ul class="nav navbar-nav navbar-right">
                         <% if(!activeUser){  %>
                             <li><a href="/Login"><i class="fas fa-user"></i> Login</a></li>
@@ -80,6 +83,7 @@
             </div>
         </div>
         <div class="row">
-            <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/aboutUs.ejs') %>
+            <%- include('./partials/aboutUs.ejs') %>
+
         </div>
-        <%- include('C:/Users/ghern/myCode/mywebsites/project1-v2/partials/bottum.ejs') %>
+        <%- include('./partials/bottum.ejs') %>
