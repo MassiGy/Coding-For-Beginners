@@ -22,7 +22,7 @@ const loginRoutes = require('./routes/loginRoutes');
 const signoutRoutes = require('./routes/signoutRoutes');
 const userRoutes = require('./routes/userRoutes')
 const otherRoutes = require('./routes/otherRoutes');
-const port = process.env.Port || 3000;
+const port = process.env.PORT || 3000;
 const dbUrl = process.env.db_Url || 'mongodb://localhost:27017/mydb';
 const sessionSecret = process.env.sessionSecret || '*thisIsTheProductionSessionSecret*';
 const sessionName = process.env.sessionName || '%Tmp%';
@@ -116,7 +116,6 @@ app.use((err, req, res, next) => {
     }
     res.render('errorPage.ejs', { err })
 })
-
 
 
 
