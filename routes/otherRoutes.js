@@ -5,7 +5,7 @@ const othersControllers = require('./controllers/otherControllers')
 
 
 
-
+router.get('/', othersControllers.homePage)
 router.get('/home', othersControllers.homePage)
 router.get('/Admin', othersControllers.adminPage)
 router.get('/comingSoon', othersControllers.comingSoon)
