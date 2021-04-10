@@ -39,6 +39,10 @@ img {
     margin-bottom: 50px;
 }
 
+#licenseTerms {
+    text-align: center !important;
+}
+
 .page-buttom {
     border-top: solid 2px rgba(1, 229, 250, 0.822);
     background-color: rgba(193, 193, 219, 0.548);
