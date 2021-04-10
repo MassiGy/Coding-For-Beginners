@@ -16,11 +16,15 @@
                     <ul class="nav navbar-nav navbar-right">
                         <% if(!activeUser){  %>
                             <li><a href="/Login"><i class="fas fa-user"></i> Login</a></li>
-                            <li><a href="/Signup" target="_blank"><i class="fas fa-user-plus"></i> Signup</a></li>
-                            <% }else{ %>
-                                <li><a href="/Logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
-                                <li><a href="/SignOut" target="-blank"><i class="fas fa-user-minus"></i> SingOut</a></li>
+                            <% if(!isSignedIn){ %>
+                                <li><a href="/Signup" target="_blank"><i class="fas fa-user-plus"></i> Signup</a></li>
                                 <% } %>
+                                    <% }else{ %>
+                                        <li><a href="/Logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                                        <% } %>
+                                            <% if(isSignedIn) { %>
+                                                <li><a href="/SignOut" target="-blank"><i class="fas fa-user-minus"></i> SingOut</a></li>
+                                                <% } %>
 
         </div>
         <!-- /.navbar-collapse -->
