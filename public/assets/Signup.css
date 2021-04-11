@@ -21,6 +21,10 @@ input {
     margin-right: 40%;
 }
 
+#imgSrcInput {
+    margin-top: 22px;
+}
+
 #btn1 {
     margin-top: 30px;
     margin-left: 46.5% !important;

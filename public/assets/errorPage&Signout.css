@@ -56,3 +56,9 @@ label {
     width: auto;
     margin: 40px;
 }
+
+@media screen and (max-width: 800px) {
+    .page-buttom {
+        width: 100% !important;
+    }
+}

@@ -21,6 +21,10 @@ input {
     margin-top: 10%;
 }
 
+#loginBtn {
+    margin-top: 10px;
+}
+
 #Login-redirect {
     margin-left: 30px;
     text-align: center !important;

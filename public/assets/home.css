@@ -63,3 +63,20 @@ img {
     max-width: 200px;
     max-height: 200px;
 }
+
+@media screen and (max-width: 800px) {
+    .row {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    img {
+        height: 400px !important;
+        width: 80% !important;
+        border-radius: 5%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 10%;
+    }
+}

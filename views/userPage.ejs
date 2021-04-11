@@ -46,7 +46,7 @@
                     </div>
                 </footer>
                 <br><br><br>
-                <% if(activeUser._id.equals(user._id)){ %>
+                <% if(activeUser && activeUser._id.equals(user._id)){ %>
                     <form action="/user/<%= user.username %>/edit" method="get">
                         <button class="btn btn-sm btn-info"> Edit Profile</button>
                     </form>
