@@ -1,5 +1,7 @@
 <script type="text/javascript">
-    $("#password").password('toggle');
+    if (window.location.href.includes('login') || window.location.href.includes('signup')) {
+        $("#password").password('toggle');
+    }
 </script>
 <script src="https://kit.fontawesome.com/e22278a48c.js" crossorigin="anonymous">
 </script>
