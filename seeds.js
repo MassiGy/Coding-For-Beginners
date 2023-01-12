@@ -7,7 +7,6 @@ mongoose.connect('mongodb://localhost:27017/mydb', { useNewUrlParser: true, useU
         console.log('Connection enabled at port 27017')
     })
     .catch((ERROR) => {
-        console.log('Error occured!')
         console.log(ERROR)
     })
 
