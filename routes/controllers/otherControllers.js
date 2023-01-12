@@ -7,9 +7,15 @@ module.exports.adminPage = (req, res) => {
 }
 
 module.exports.logout = (req, res) => {
-    req.logOut();
-    req.flash('success', 'Successfully Logged Out, By!')
-    res.redirect('/home');
+    req.logOut(err => {
+        if (err) {
+            req.flash("error", "Something went wrong on logout ! We will work on it soon.");
+            return res.redirect("/home");
+        }
+        req.flash("success", "Successfully Logged Out. Bye!")
+        res.redirect('/home');
+    });
+  
 }
 
 module.exports.comingSoon = (req, res) => {
