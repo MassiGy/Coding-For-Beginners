@@ -18,9 +18,12 @@ const signupSchema = new mongoose.Schema({
 
 signupSchema.plugin(passportLM);
 
+
+// no need to await, nodejs will do it after that the task queue is empty
+// (performance gain)
 signupSchema.post('findOneAndDelete', async(doc) => {
     if (doc.postedFeedbacks.length > 0) {
-        await Feedback.deleteMany({
+        Feedback.deleteMany({
             _id: {
                 $in: doc.postedFeedbacks,
             }

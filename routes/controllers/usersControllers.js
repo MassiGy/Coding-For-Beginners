@@ -2,8 +2,14 @@ const Signup = require('../../public/Modals/signup');
 const { validationFn, signUpValidators } = require('../../tools/validators');
 
 module.exports.userPage = async(req, res) => {
+
+    // get the username from the paramas
     const { username } = req.params;
-    let user = await Signup.findOne({ username: username }).populate('postedFeedbacks');
+
+    // get the user data & his feedbacks
+    let user = await Signup.findOne({ username }).populate('postedFeedbacks');
+   
+    // if user render the data, if not inform the client
     if (!user) {
         req.flash('danger', 'User Not Sign In')
         res.redirect(`/feedbacks`)
@@ -14,8 +20,15 @@ module.exports.userPage = async(req, res) => {
 
 
 module.exports.renderEditForm = async(req, res) => {
+
+    // get the username from the edit
     const { username } = req.params;
-    let user = await Signup.findOne({ username: username });
+
+    // fetch the user by username
+    let user = await Signup.findOne({ username });
+
+
+    // if user then render the page, else inform the client
     if (!user) {
         req.flash('danger', 'User Not Sign In')
         res.redirect(`/feedbacks`)
@@ -26,9 +39,17 @@ module.exports.renderEditForm = async(req, res) => {
 
 
 module.exports.editUser = async(req, res) => {
-    validationFn(req.body, signUpValidators)
+
+    // validate the data
+    validationFn(req.body, signUpValidators);
+
+    // get the username from the params
     const { username } = req.params;
-    let newUser = await Signup.findOneAndUpdate(username, req.body, { runValidators: true })
+
+    // update hte user;
+    let updatedUser = await Signup.findOneAndUpdate(username, req.body, { runValidators: true });
+
+    // inform & redirect to the updated user page
     req.flash('success', 'Successfuly Updated User ! ');
-    res.redirect(`/user/${newUser.username}`)
+    res.redirect(`/user/${updatedUser.username}`)
 }

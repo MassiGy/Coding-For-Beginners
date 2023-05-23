@@ -7,6 +7,8 @@ module.exports.adminPage = (req, res) => {
 }
 
 module.exports.logout = (req, res) => {
+
+    // use the passport logout method to pause the current session
     req.logOut(err => {
         if (err) {
             req.flash("error", "Something went wrong on logout ! We will work on it soon.");
