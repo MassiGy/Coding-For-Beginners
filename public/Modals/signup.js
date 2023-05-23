@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const passportLM = require('passport-local-mongoose')
 const Feedback = require('./feedbacks')
+
 const signupSchema = new mongoose.Schema({
     email: {
         type: String,

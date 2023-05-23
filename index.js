@@ -30,7 +30,7 @@ const sessionName = process.env.sessionName || '%Tmp%';
 const store = MongoStore.create({
     mongoUrl: dbUrl,
     secret: sessionSecret,
-    touchAfter: 24 * 60 * 60,
+    touchAfter: 7 * 24 * 60 * 60,
 })
 store.on('error', (err) => {
     console.log('session error...', err)
@@ -45,7 +45,6 @@ const sessionConfig = {
     cookie: {
         httpOnly: true,
         // secure: true,
-        expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
         maxAge: 1000 * 60 * 60 * 24 * 7
     }
 }

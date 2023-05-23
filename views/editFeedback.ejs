@@ -38,8 +38,8 @@
             <div class="row">
                 <div class="col-sm-4 col-xs-6">
                     <h4><i class="fas fa-address-card"></i> Who are you ?!</h4><br>
-                    <input id="user-email" class="form-control" type="email" name="email" placeholder="email" value="<%= feedbackToEdit.email %>" required autofocus>
-                    <input id="user-username" class="form-control" type="username" name="username" placeholder="username" value="<%= feedbackToEdit.username %>" required>
+                    <input id="user-email" class="form-control" type="email" name="email" placeholder="email" value="<%= feedbackToEdit.author?.email %>" required autofocus>
+                    <input id="user-username" class="form-control" type="username" name="username" placeholder="username" value="<%= feedbackToEdit.author?.username %>" required>
                     <input id="user-job" class="form-control" type="text" name="userJob" placeholder=" Your Work in Life ! " value=" <%= feedbackToEdit.userJob %> " required>
                 </div>
 
