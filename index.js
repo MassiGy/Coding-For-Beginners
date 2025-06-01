@@ -95,6 +95,7 @@ app.use(express.static('partials'));
 app.use(express.json());
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
+app.use(express.static('extras'));
 
 // setup our mongo sanitization
 app.use(mongoSanitize({ replaceWith: '_' }));
